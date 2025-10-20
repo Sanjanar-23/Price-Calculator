@@ -1,3 +1,5 @@
+require 'csv'
+
 class PriceCalculatorController < ApplicationController
   def index
     @products = Product.all
