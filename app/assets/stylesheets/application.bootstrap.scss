@@ -1,0 +1,117 @@
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons';
+
+// Custom styles for Price Calculator
+.price-calculator {
+  .card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-header {
+    border-radius: 15px 15px 0 0 !important;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  }
+
+  .form-control, .form-select {
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+
+    &:focus {
+      border-color: #667eea;
+      box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+    }
+  }
+
+  .btn {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &.btn-primary {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border: none;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+      }
+    }
+
+    &.btn-outline-secondary {
+      &:hover {
+        transform: translateY(-1px);
+      }
+    }
+  }
+
+  .alert {
+    border-radius: 10px;
+    border: none;
+  }
+
+  .calculator-form {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-top: 1rem;
+  }
+
+  .form-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-text {
+    font-size: 0.875rem;
+    color: #6c757d;
+    font-style: italic;
+  }
+
+  .input-group {
+    .btn {
+      border-left: none;
+    }
+  }
+
+  // Animation for form elements
+  .form-control, .form-select {
+    &:focus {
+      transform: translateY(-1px);
+    }
+  }
+
+  // Custom styling for readonly fields
+  .form-control[readonly] {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+  }
+
+  // Price field styling
+  #price {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #28a745;
+    text-align: center;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .price-calculator {
+    .container {
+      padding: 0 15px;
+    }
+
+    .card-body {
+      padding: 1.5rem;
+    }
+
+    .calculator-form {
+      padding: 1.5rem;
+    }
+  }
+}

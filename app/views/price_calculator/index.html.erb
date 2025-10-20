@@ -1,0 +1,123 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+          <h2 class="mb-0">
+            <i class="bi bi-calculator me-2"></i>
+            Price Calculator
+          </h2>
+        </div>
+        <div class="card-body">
+          <!-- Flash Messages -->
+          <% if flash[:success] %>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <i class="bi bi-check-circle me-2"></i>
+              <%= flash[:success] %>
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+          <% end %>
+
+          <% if flash[:error] %>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <i class="bi bi-exclamation-triangle me-2"></i>
+              <%= flash[:error] %>
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+          <% end %>
+
+          <!-- CSV Upload Section -->
+          <div class="mb-4">
+            <h4 class="text-primary mb-3">
+              <i class="bi bi-upload me-2"></i>
+              Upload CSV File
+            </h4>
+            <%= form_with url: upload_csv_price_calculator_index_path, method: :post, multipart: true, local: true, class: "row g-3" do |form| %>
+              <div class="col-md-8">
+                <%= form.file_field :csv_file, accept: ".csv", class: "form-control", required: true %>
+                <div class="form-text">
+                  Upload a CSV file with columns: Product Name, Level, DTP Price
+                </div>
+              </div>
+              <div class="col-md-4">
+                <%= form.submit "Upload CSV", class: "btn btn-primary w-100" %>
+              </div>
+            <% end %>
+          </div>
+
+          <!-- Calculator Form -->
+          <div class="calculator-form" data-controller="price-calculator">
+            <h4 class="text-primary mb-3">
+              <i class="bi bi-calculator me-2"></i>
+              Price Calculator
+            </h4>
+
+            <div class="row g-3">
+              <!-- Anniversary Date -->
+              <div class="col-md-6">
+                <label for="anniversary_date" class="form-label">Anniversary Date</label>
+                <input type="date" class="form-control" id="anniversary_date" data-price-calculator-target="anniversaryDate" data-action="change->price-calculator#calculateDays">
+              </div>
+
+              <!-- Current Date -->
+              <div class="col-md-6">
+                <label for="current_date" class="form-label">Current Date</label>
+                <div class="input-group">
+                  <input type="date" class="form-control" id="current_date" data-price-calculator-target="currentDate" data-action="change->price-calculator#calculateDays">
+                  <button class="btn btn-outline-secondary" type="button" data-action="click->price-calculator#setToday">
+                    <i class="bi bi-calendar-check"></i> Today
+                  </button>
+                </div>
+              </div>
+
+              <!-- Days -->
+              <div class="col-md-6">
+                <label for="days" class="form-label">Days</label>
+                <input type="text" class="form-control" id="days" readonly data-price-calculator-target="days">
+              </div>
+
+              <!-- Level -->
+              <div class="col-md-6">
+                <label for="level" class="form-label">Level</label>
+                <select class="form-select" id="level" data-price-calculator-target="level" data-action="change->price-calculator#loadProducts">
+                  <option value="">Select Level</option>
+                  <% @levels.each do |level| %>
+                    <option value="<%= level %>"><%= level %></option>
+                  <% end %>
+                </select>
+              </div>
+
+              <!-- Product -->
+              <div class="col-md-6">
+                <label for="product" class="form-label">Product</label>
+                <select class="form-select" id="product" data-price-calculator-target="product" data-action="change->price-calculator#updateDtpPrice">
+                  <option value="">Select Product</option>
+                </select>
+              </div>
+
+              <!-- DTP Price -->
+              <div class="col-md-6">
+                <label for="dtp_price" class="form-label">DTP Price</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="dtp_price" readonly data-price-calculator-target="dtpPrice">
+                  <button class="btn btn-outline-secondary" type="button" data-action="click->price-calculator#copyDtpPrice">
+                    <i class="bi bi-clipboard"></i> Copy
+                  </button>
+                </div>
+              </div>
+
+              <!-- Price -->
+              <div class="col-12">
+                <label for="price" class="form-label">Price</label>
+                <input type="text" class="form-control form-control-lg bg-light" id="price" readonly data-price-calculator-target="price">
+                <div class="form-text">
+                  Price = DTP Price × (Days / 365) × 1.1
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
