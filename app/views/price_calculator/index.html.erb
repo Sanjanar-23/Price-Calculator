@@ -32,11 +32,20 @@
               <i class="bi bi-upload me-2"></i>
               Upload CSV File
             </h4>
-            <%= form_with url: upload_csv_price_calculator_index_path, method: :post, multipart: true, local: true, class: "row g-3" do |form| %>
+            <%= form_with url: upload_csv_price_calculator_index_path, method: :post, multipart: true, local: true, class: "row g-3", id: "csv_upload_form" do |form| %>
               <div class="col-md-8">
-                <%= form.file_field :csv_file, accept: ".csv", class: "form-control", required: true %>
+                <div class="input-group">
+                  <%= form.file_field :csv_file, accept: ".csv", class: "form-control", required: true, id: "csv_file_input" %>
+                  <label class="input-group-text" for="csv_file_input">
+                    <i class="bi bi-upload"></i> Choose File
+                  </label>
+                </div>
                 <div class="form-text">
                   Upload a CSV file with columns: Product Name, Level, DTP Price
+                </div>
+                <div id="file_name_display" class="mt-2 text-success" style="display: none;">
+                  <i class="bi bi-file-earmark-text me-1"></i>
+                  <span id="selected_file_name"></span>
                 </div>
               </div>
               <div class="col-md-4">
@@ -111,7 +120,7 @@
                 <label for="price" class="form-label">Price</label>
                 <input type="text" class="form-control form-control-lg bg-light" id="price" readonly data-price-calculator-target="price">
                 <div class="form-text">
-                  Price = DTP Price × (Days / 365) × 1.1
+                  Price = (DTP Price / 365) × Days
                 </div>
               </div>
             </div>
@@ -121,3 +130,22 @@
     </div>
   </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const fileInput = document.getElementById('csv_file_input');
+  const fileNameDisplay = document.getElementById('file_name_display');
+  const selectedFileName = document.getElementById('selected_file_name');
+
+  if (fileInput) {
+    fileInput.addEventListener('change', function() {
+      if (this.files && this.files[0]) {
+        selectedFileName.textContent = this.files[0].name;
+        fileNameDisplay.style.display = 'block';
+      } else {
+        fileNameDisplay.style.display = 'none';
+      }
+    });
+  }
+});
+</script>

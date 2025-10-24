@@ -75,8 +75,8 @@ export default class extends Controller {
     const dtpPrice = parseFloat(this.dtpPriceTarget.value)
 
     if (days && dtpPrice) {
-      // Price = DTP Price × (Days / 365) × 1.1
-      const price = dtpPrice * (days / 365) * 1.1
+      // Price = (DTP Price/365) * days
+      const price = (dtpPrice / 365) * days
       this.priceTarget.value = price.toFixed(2)
     } else {
       this.priceTarget.value = ""

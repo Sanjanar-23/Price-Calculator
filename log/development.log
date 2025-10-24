@@ -61,3 +61,1372 @@ Processing by PriceCalculatorController#index as TURBO_STREAM
 Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.2ms | Allocations: 3515)
 
 
+Started GET "/" for 127.0.0.1 at 2025-10-21 01:03:45 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 3098)
+  Rendered layout layouts/application.html.erb (Duration: 38.9ms | Allocations: 61812)
+Completed 200 OK in 60ms (Views: 40.7ms | ActiveRecord: 1.2ms | Allocations: 73067)
+
+
+Started POST "/price_calculator/upload_csv" for 127.0.0.1 at 2025-10-21 01:03:53 +0530
+Processing by PriceCalculatorController#upload_csv as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x0000000122954340 @tempfile=#<Tempfile:/var/folders/pg/hjqjg2bd6n19jqmz8j5jjp2h0000gp/T/RackMultipart20251021-70946-lb94v2.csv>, @content_type="text/csv", @original_filename="sample_products.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"sample_products.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload CSV"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (4.8ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Premium Widget"], ["level", "Gold"], ["dtp_price", 150.0], ["created_at", "2025-10-20 19:33:53.448601"], ["updated_at", "2025-10-20 19:33:53.448601"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.8ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Standard Widget"], ["level", "Silver"], ["dtp_price", 100.0], ["created_at", "2025-10-20 19:33:53.462747"], ["updated_at", "2025-10-20 19:33:53.462747"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Basic Widget"], ["level", "Bronze"], ["dtp_price", 75.0], ["created_at", "2025-10-20 19:33:53.465285"], ["updated_at", "2025-10-20 19:33:53.465285"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Deluxe Widget"], ["level", "Gold"], ["dtp_price", 200.0], ["created_at", "2025-10-20 19:33:53.466595"], ["updated_at", "2025-10-20 19:33:53.466595"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Economy Widget"], ["level", "Bronze"], ["dtp_price", 50.0], ["created_at", "2025-10-20 19:33:53.467572"], ["updated_at", "2025-10-20 19:33:53.467572"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Professional Widget"], ["level", "Silver"], ["dtp_price", 125.0], ["created_at", "2025-10-20 19:33:53.468526"], ["updated_at", "2025-10-20 19:33:53.468526"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Enterprise Widget"], ["level", "Gold"], ["dtp_price", 300.0], ["created_at", "2025-10-20 19:33:53.469456"], ["updated_at", "2025-10-20 19:33:53.469456"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Starter Widget"], ["level", "Bronze"], ["dtp_price", 60.0], ["created_at", "2025-10-20 19:33:53.470503"], ["updated_at", "2025-10-20 19:33:53.470503"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Advanced Widget"], ["level", "Silver"], ["dtp_price", 110.0], ["created_at", "2025-10-20 19:33:53.471837"], ["updated_at", "2025-10-20 19:33:53.471837"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ultimate Widget"], ["level", "Gold"], ["dtp_price", 250.0], ["created_at", "2025-10-20 19:33:53.472739"], ["updated_at", "2025-10-20 19:33:53.472739"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:26:in `upload_csv'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 63ms (ActiveRecord: 9.5ms | Allocations: 23934)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-21 01:03:53 +0530
+Processing by PriceCalculatorController#index as TURBO_STREAM
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 1006)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 2899)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 3570)
+
+
+Started GET "/price_calculator/products?level=Bronze" for 127.0.0.1 at 2025-10-21 01:04:37 +0530
+Processing by PriceCalculatorController#products as */*
+  Parameters: {"level"=>"Bronze"}
+  [1m[36mProduct Pluck (0.4ms)[0m  [1m[34mSELECT "products"."name", "products"."dtp_price" FROM "products" WHERE "products"."level" = ?[0m  [["level", "Bronze"]]
+  ↳ app/controllers/price_calculator_controller.rb:43:in `products'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 3418)
+
+
+Started GET "/price_calculator/products?level=Gold" for 127.0.0.1 at 2025-10-21 01:05:12 +0530
+Processing by PriceCalculatorController#products as */*
+  Parameters: {"level"=>"Gold"}
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT "products"."name", "products"."dtp_price" FROM "products" WHERE "products"."level" = ?[0m  [["level", "Gold"]]
+  ↳ app/controllers/price_calculator_controller.rb:43:in `products'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 545)
+
+
+Started GET "/price_calculator/products?level=Bronze" for 127.0.0.1 at 2025-10-21 01:05:33 +0530
+Processing by PriceCalculatorController#products as */*
+  Parameters: {"level"=>"Bronze"}
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT "products"."name", "products"."dtp_price" FROM "products" WHERE "products"."level" = ?[0m  [["level", "Bronze"]]
+  ↳ app/controllers/price_calculator_controller.rb:43:in `products'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 541)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-21 01:08:13 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1486)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 36128)
+Completed 200 OK in 25ms (Views: 21.0ms | ActiveRecord: 1.3ms | Allocations: 38785)
+
+
+Started POST "/price_calculator/upload_csv" for 127.0.0.1 at 2025-10-21 01:08:20 +0530
+Processing by PriceCalculatorController#upload_csv as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x0000000122673a40 @tempfile=#<Tempfile:/var/folders/pg/hjqjg2bd6n19jqmz8j5jjp2h0000gp/T/RackMultipart20251021-70946-wcv065.csv>, @content_type="text/csv", @original_filename="sample_products.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"sample_products.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload CSV"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.8ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.7ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.8ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.6ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Premium Widget"], ["level", "Gold"], ["dtp_price", 150.0], ["created_at", "2025-10-20 19:38:20.897721"], ["updated_at", "2025-10-20 19:38:20.897721"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Standard Widget"], ["level", "Silver"], ["dtp_price", 100.0], ["created_at", "2025-10-20 19:38:20.899525"], ["updated_at", "2025-10-20 19:38:20.899525"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Basic Widget"], ["level", "Bronze"], ["dtp_price", 75.0], ["created_at", "2025-10-20 19:38:20.900750"], ["updated_at", "2025-10-20 19:38:20.900750"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Deluxe Widget"], ["level", "Gold"], ["dtp_price", 200.0], ["created_at", "2025-10-20 19:38:20.901931"], ["updated_at", "2025-10-20 19:38:20.901931"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Economy Widget"], ["level", "Bronze"], ["dtp_price", 50.0], ["created_at", "2025-10-20 19:38:20.903122"], ["updated_at", "2025-10-20 19:38:20.903122"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (3.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Professional Widget"], ["level", "Silver"], ["dtp_price", 125.0], ["created_at", "2025-10-20 19:38:20.904785"], ["updated_at", "2025-10-20 19:38:20.904785"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Enterprise Widget"], ["level", "Gold"], ["dtp_price", 300.0], ["created_at", "2025-10-20 19:38:20.909126"], ["updated_at", "2025-10-20 19:38:20.909126"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Starter Widget"], ["level", "Bronze"], ["dtp_price", 60.0], ["created_at", "2025-10-20 19:38:20.910295"], ["updated_at", "2025-10-20 19:38:20.910295"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Advanced Widget"], ["level", "Silver"], ["dtp_price", 110.0], ["created_at", "2025-10-20 19:38:20.911306"], ["updated_at", "2025-10-20 19:38:20.911306"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ultimate Widget"], ["level", "Gold"], ["dtp_price", 250.0], ["created_at", "2025-10-20 19:38:20.912297"], ["updated_at", "2025-10-20 19:38:20.912297"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:26:in `upload_csv'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 40ms (ActiveRecord: 14.9ms | Allocations: 32256)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-21 01:08:20 +0530
+Processing by PriceCalculatorController#index as TURBO_STREAM
+  [1m[36mProduct Pluck (0.0ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1007)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2900)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 3558)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 09:50:43 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.3ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 3145)
+  Rendered layout layouts/application.html.erb (Duration: 46.0ms | Allocations: 61796)
+Completed 200 OK in 68ms (Views: 48.0ms | ActiveRecord: 1.5ms | Allocations: 73073)
+
+
+Started POST "/price_calculator/upload_csv" for 127.0.0.1 at 2025-10-24 09:50:51 +0530
+Processing by PriceCalculatorController#upload_csv as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x00000001255521e0 @tempfile=#<Tempfile:/var/folders/pg/hjqjg2bd6n19jqmz8j5jjp2h0000gp/T/RackMultipart20251024-76560-tqdpmp.csv>, @content_type="text/csv", @original_filename="sample_products.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"sample_products.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload CSV"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (1.0ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 14]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 15]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 16]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 17]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 18]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 19]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 20]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Premium Widget"], ["level", "Gold"], ["dtp_price", 150.0], ["created_at", "2025-10-24 04:20:51.146747"], ["updated_at", "2025-10-24 04:20:51.146747"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Standard Widget"], ["level", "Silver"], ["dtp_price", 100.0], ["created_at", "2025-10-24 04:20:51.148208"], ["updated_at", "2025-10-24 04:20:51.148208"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Basic Widget"], ["level", "Bronze"], ["dtp_price", 75.0], ["created_at", "2025-10-24 04:20:51.149255"], ["updated_at", "2025-10-24 04:20:51.149255"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Deluxe Widget"], ["level", "Gold"], ["dtp_price", 200.0], ["created_at", "2025-10-24 04:20:51.150407"], ["updated_at", "2025-10-24 04:20:51.150407"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Economy Widget"], ["level", "Bronze"], ["dtp_price", 50.0], ["created_at", "2025-10-24 04:20:51.151534"], ["updated_at", "2025-10-24 04:20:51.151534"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Professional Widget"], ["level", "Silver"], ["dtp_price", 125.0], ["created_at", "2025-10-24 04:20:51.152613"], ["updated_at", "2025-10-24 04:20:51.152613"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Enterprise Widget"], ["level", "Gold"], ["dtp_price", 300.0], ["created_at", "2025-10-24 04:20:51.153636"], ["updated_at", "2025-10-24 04:20:51.153636"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Starter Widget"], ["level", "Bronze"], ["dtp_price", 60.0], ["created_at", "2025-10-24 04:20:51.154591"], ["updated_at", "2025-10-24 04:20:51.154591"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Advanced Widget"], ["level", "Silver"], ["dtp_price", 110.0], ["created_at", "2025-10-24 04:20:51.155575"], ["updated_at", "2025-10-24 04:20:51.155575"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ultimate Widget"], ["level", "Gold"], ["dtp_price", 250.0], ["created_at", "2025-10-24 04:20:51.156539"], ["updated_at", "2025-10-24 04:20:51.156539"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:26:in `upload_csv'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 40ms (ActiveRecord: 9.2ms | Allocations: 37031)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 09:50:51 +0530
+Processing by PriceCalculatorController#index as TURBO_STREAM
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 1015)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2908)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 3577)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 10:07:15 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 3154)
+  Rendered layout layouts/application.html.erb (Duration: 41.7ms | Allocations: 61870)
+Completed 200 OK in 63ms (Views: 43.8ms | ActiveRecord: 1.3ms | Allocations: 73141)
+
+
+Started POST "/price_calculator/upload_csv" for 127.0.0.1 at 2025-10-24 10:07:22 +0530
+Processing by PriceCalculatorController#upload_csv as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x0000000123a59758 @tempfile=#<Tempfile:/var/folders/pg/hjqjg2bd6n19jqmz8j5jjp2h0000gp/T/RackMultipart20251024-79237-dlp5al.csv>, @content_type="text/csv", @original_filename="sample_products.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"sample_products.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload CSV"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (1.6ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 21]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (1.1ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 22]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (2.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 23]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 24]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.7ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 25]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 26]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 27]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 28]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 29]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 30]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Premium Widget"], ["level", "Gold"], ["dtp_price", 150.0], ["created_at", "2025-10-24 04:37:22.833031"], ["updated_at", "2025-10-24 04:37:22.833031"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Standard Widget"], ["level", "Silver"], ["dtp_price", 100.0], ["created_at", "2025-10-24 04:37:22.834735"], ["updated_at", "2025-10-24 04:37:22.834735"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Basic Widget"], ["level", "Bronze"], ["dtp_price", 75.0], ["created_at", "2025-10-24 04:37:22.836099"], ["updated_at", "2025-10-24 04:37:22.836099"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Deluxe Widget"], ["level", "Gold"], ["dtp_price", 200.0], ["created_at", "2025-10-24 04:37:22.837085"], ["updated_at", "2025-10-24 04:37:22.837085"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Economy Widget"], ["level", "Bronze"], ["dtp_price", 50.0], ["created_at", "2025-10-24 04:37:22.838002"], ["updated_at", "2025-10-24 04:37:22.838002"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Professional Widget"], ["level", "Silver"], ["dtp_price", 125.0], ["created_at", "2025-10-24 04:37:22.838912"], ["updated_at", "2025-10-24 04:37:22.838912"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Enterprise Widget"], ["level", "Gold"], ["dtp_price", 300.0], ["created_at", "2025-10-24 04:37:22.840001"], ["updated_at", "2025-10-24 04:37:22.840001"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Starter Widget"], ["level", "Bronze"], ["dtp_price", 60.0], ["created_at", "2025-10-24 04:37:22.840901"], ["updated_at", "2025-10-24 04:37:22.840901"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Advanced Widget"], ["level", "Silver"], ["dtp_price", 110.0], ["created_at", "2025-10-24 04:37:22.841808"], ["updated_at", "2025-10-24 04:37:22.841808"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ultimate Widget"], ["level", "Gold"], ["dtp_price", 250.0], ["created_at", "2025-10-24 04:37:22.842676"], ["updated_at", "2025-10-24 04:37:22.842676"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:26:in `upload_csv'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 57ms (ActiveRecord: 14.0ms | Allocations: 37021)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 10:07:22 +0530
+Processing by PriceCalculatorController#index as TURBO_STREAM
+  [1m[36mProduct Pluck (0.0ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 1003)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 2896)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 3565)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 10:09:37 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.0ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1523)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 36244)
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 1.1ms | Allocations: 38907)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 11:39:35 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (1.4ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 972)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 2833)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 1.9ms | Allocations: 3679)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 11:39:36 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 981)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 2842)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 3451)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 11:39:36 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 993)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2855)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.2ms | Allocations: 3478)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 11:39:36 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.3ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 986)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2847)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 3456)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 11:39:36 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1004)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 2865)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.1ms | Allocations: 3475)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 11:39:37 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 984)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2847)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.1ms | Allocations: 3456)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 11:39:37 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 992)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2854)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 3463)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 11:39:37 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 995)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2856)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 3465)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 11:39:38 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 984)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2845)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 3454)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 11:39:38 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 987)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2849)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 3458)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 11:39:38 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 977)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2838)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.2ms | Allocations: 3447)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 11:39:39 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 984)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 2877)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.2ms | Allocations: 3486)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 11:39:39 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 983)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2873)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 3482)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 11:39:39 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 992)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2853)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.1ms | Allocations: 3462)
+
+
+Started POST "/price_calculator/upload_csv" for 127.0.0.1 at 2025-10-24 11:39:48 +0530
+Processing by PriceCalculatorController#upload_csv as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x0000000126cd3350 @tempfile=#<Tempfile:/var/folders/pg/hjqjg2bd6n19jqmz8j5jjp2h0000gp/T/RackMultipart20251024-79237-e4nxj3.csv>, @content_type="text/csv", @original_filename="sample_products.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"sample_products.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload CSV"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.7ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 31]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 32]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 33]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 34]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 35]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 36]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 37]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 38]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 39]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.9ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 40]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Premium Widget"], ["level", "Gold"], ["dtp_price", 150.0], ["created_at", "2025-10-24 06:09:48.268648"], ["updated_at", "2025-10-24 06:09:48.268648"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Standard Widget"], ["level", "Silver"], ["dtp_price", 100.0], ["created_at", "2025-10-24 06:09:48.270383"], ["updated_at", "2025-10-24 06:09:48.270383"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Basic Widget"], ["level", "Bronze"], ["dtp_price", 75.0], ["created_at", "2025-10-24 06:09:48.271829"], ["updated_at", "2025-10-24 06:09:48.271829"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Deluxe Widget"], ["level", "Gold"], ["dtp_price", 200.0], ["created_at", "2025-10-24 06:09:48.274196"], ["updated_at", "2025-10-24 06:09:48.274196"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Economy Widget"], ["level", "Bronze"], ["dtp_price", 50.0], ["created_at", "2025-10-24 06:09:48.276029"], ["updated_at", "2025-10-24 06:09:48.276029"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Professional Widget"], ["level", "Silver"], ["dtp_price", 125.0], ["created_at", "2025-10-24 06:09:48.277409"], ["updated_at", "2025-10-24 06:09:48.277409"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Enterprise Widget"], ["level", "Gold"], ["dtp_price", 300.0], ["created_at", "2025-10-24 06:09:48.278882"], ["updated_at", "2025-10-24 06:09:48.278882"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Starter Widget"], ["level", "Bronze"], ["dtp_price", 60.0], ["created_at", "2025-10-24 06:09:48.280413"], ["updated_at", "2025-10-24 06:09:48.280413"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Advanced Widget"], ["level", "Silver"], ["dtp_price", 110.0], ["created_at", "2025-10-24 06:09:48.281586"], ["updated_at", "2025-10-24 06:09:48.281586"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ultimate Widget"], ["level", "Gold"], ["dtp_price", 250.0], ["created_at", "2025-10-24 06:09:48.282975"], ["updated_at", "2025-10-24 06:09:48.282975"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:26:in `upload_csv'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 38ms (ActiveRecord: 12.2ms | Allocations: 32125)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 11:39:48 +0530
+Processing by PriceCalculatorController#index as TURBO_STREAM
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 1014)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 2907)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 3563)
+
+
+Started GET "/price_calculator/products?level=Bronze" for 127.0.0.1 at 2025-10-24 11:41:12 +0530
+Processing by PriceCalculatorController#products as */*
+  Parameters: {"level"=>"Bronze"}
+  [1m[36mProduct Pluck (0.3ms)[0m  [1m[34mSELECT "products"."name", "products"."dtp_price" FROM "products" WHERE "products"."level" = ?[0m  [["level", "Bronze"]]
+  ↳ app/controllers/price_calculator_controller.rb:43:in `products'
+Completed 200 OK in 6ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 651)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 11:46:19 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1501)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 38854)
+Completed 200 OK in 29ms (Views: 25.0ms | ActiveRecord: 1.3ms | Allocations: 41496)
+
+
+Started POST "/price_calculator/upload_csv" for 127.0.0.1 at 2025-10-24 11:46:27 +0530
+Processing by PriceCalculatorController#upload_csv as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x0000000126d522b8 @tempfile=#<Tempfile:/var/folders/pg/hjqjg2bd6n19jqmz8j5jjp2h0000gp/T/RackMultipart20251024-79237-h7dpc.csv>, @content_type="text/csv", @original_filename="sample_products.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"sample_products.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload CSV"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (2.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 41]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (2.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 42]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (1.7ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 43]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 44]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 45]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 46]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 47]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 48]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 49]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 50]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Premium Widget"], ["level", "Gold"], ["dtp_price", 150.0], ["created_at", "2025-10-24 06:16:27.371342"], ["updated_at", "2025-10-24 06:16:27.371342"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Standard Widget"], ["level", "Silver"], ["dtp_price", 100.0], ["created_at", "2025-10-24 06:16:27.372345"], ["updated_at", "2025-10-24 06:16:27.372345"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Basic Widget"], ["level", "Bronze"], ["dtp_price", 75.0], ["created_at", "2025-10-24 06:16:27.373382"], ["updated_at", "2025-10-24 06:16:27.373382"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Deluxe Widget"], ["level", "Gold"], ["dtp_price", 200.0], ["created_at", "2025-10-24 06:16:27.374587"], ["updated_at", "2025-10-24 06:16:27.374587"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Economy Widget"], ["level", "Bronze"], ["dtp_price", 50.0], ["created_at", "2025-10-24 06:16:27.375544"], ["updated_at", "2025-10-24 06:16:27.375544"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Professional Widget"], ["level", "Silver"], ["dtp_price", 125.0], ["created_at", "2025-10-24 06:16:27.376444"], ["updated_at", "2025-10-24 06:16:27.376444"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Enterprise Widget"], ["level", "Gold"], ["dtp_price", 300.0], ["created_at", "2025-10-24 06:16:27.377824"], ["updated_at", "2025-10-24 06:16:27.377824"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Starter Widget"], ["level", "Bronze"], ["dtp_price", 60.0], ["created_at", "2025-10-24 06:16:27.378976"], ["updated_at", "2025-10-24 06:16:27.378976"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Advanced Widget"], ["level", "Silver"], ["dtp_price", 110.0], ["created_at", "2025-10-24 06:16:27.379894"], ["updated_at", "2025-10-24 06:16:27.379894"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ultimate Widget"], ["level", "Gold"], ["dtp_price", 250.0], ["created_at", "2025-10-24 06:16:27.380704"], ["updated_at", "2025-10-24 06:16:27.380704"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:26:in `upload_csv'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 45ms (ActiveRecord: 13.8ms | Allocations: 32130)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 11:46:27 +0530
+Processing by PriceCalculatorController#index as TURBO_STREAM
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 1002)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 2895)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 3552)
+
+
+Started GET "/price_calculator/products?level=Bronze" for 127.0.0.1 at 2025-10-24 11:46:45 +0530
+Processing by PriceCalculatorController#products as */*
+  Parameters: {"level"=>"Bronze"}
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT "products"."name", "products"."dtp_price" FROM "products" WHERE "products"."level" = ?[0m  [["level", "Bronze"]]
+  ↳ app/controllers/price_calculator_controller.rb:43:in `products'
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 554)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 11:54:15 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (2.4ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 981)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 2875)
+Completed 200 OK in 14ms (Views: 9.2ms | ActiveRecord: 3.6ms | Allocations: 3721)
+
+
+Started POST "/price_calculator/upload_csv" for 127.0.0.1 at 2025-10-24 11:54:24 +0530
+Processing by PriceCalculatorController#upload_csv as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x0000000126d58e38 @tempfile=#<Tempfile:/var/folders/pg/hjqjg2bd6n19jqmz8j5jjp2h0000gp/T/RackMultipart20251024-79237-7scy7t.csv>, @content_type="text/csv", @original_filename="sample_products.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"sample_products.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload CSV"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 51]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 52]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 53]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 54]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 55]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 56]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 57]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 58]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 59]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 60]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Premium Widget"], ["level", "Gold"], ["dtp_price", 150.0], ["created_at", "2025-10-24 06:24:24.154151"], ["updated_at", "2025-10-24 06:24:24.154151"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Standard Widget"], ["level", "Silver"], ["dtp_price", 100.0], ["created_at", "2025-10-24 06:24:24.156214"], ["updated_at", "2025-10-24 06:24:24.156214"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Basic Widget"], ["level", "Bronze"], ["dtp_price", 75.0], ["created_at", "2025-10-24 06:24:24.157547"], ["updated_at", "2025-10-24 06:24:24.157547"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Deluxe Widget"], ["level", "Gold"], ["dtp_price", 200.0], ["created_at", "2025-10-24 06:24:24.158688"], ["updated_at", "2025-10-24 06:24:24.158688"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Economy Widget"], ["level", "Bronze"], ["dtp_price", 50.0], ["created_at", "2025-10-24 06:24:24.159934"], ["updated_at", "2025-10-24 06:24:24.159934"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Professional Widget"], ["level", "Silver"], ["dtp_price", 125.0], ["created_at", "2025-10-24 06:24:24.161537"], ["updated_at", "2025-10-24 06:24:24.161537"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Enterprise Widget"], ["level", "Gold"], ["dtp_price", 300.0], ["created_at", "2025-10-24 06:24:24.163450"], ["updated_at", "2025-10-24 06:24:24.163450"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Starter Widget"], ["level", "Bronze"], ["dtp_price", 60.0], ["created_at", "2025-10-24 06:24:24.164699"], ["updated_at", "2025-10-24 06:24:24.164699"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Advanced Widget"], ["level", "Silver"], ["dtp_price", 110.0], ["created_at", "2025-10-24 06:24:24.166114"], ["updated_at", "2025-10-24 06:24:24.166114"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ultimate Widget"], ["level", "Gold"], ["dtp_price", 250.0], ["created_at", "2025-10-24 06:24:24.169763"], ["updated_at", "2025-10-24 06:24:24.169763"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:26:in `upload_csv'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 28ms (ActiveRecord: 9.0ms | Allocations: 29279)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 11:54:24 +0530
+Processing by PriceCalculatorController#index as TURBO_STREAM
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1026)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2919)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 3532)
+
+
+Started GET "/price_calculator/products?level=Gold" for 127.0.0.1 at 2025-10-24 11:54:38 +0530
+Processing by PriceCalculatorController#products as */*
+  Parameters: {"level"=>"Gold"}
+  [1m[36mProduct Pluck (0.8ms)[0m  [1m[34mSELECT "products"."name", "products"."dtp_price" FROM "products" WHERE "products"."level" = ?[0m  [["level", "Gold"]]
+  ↳ app/controllers/price_calculator_controller.rb:43:in `products'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 555)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 12:08:53 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (2.3ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 974)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2835)
+Completed 200 OK in 13ms (Views: 6.4ms | ActiveRecord: 3.1ms | Allocations: 3680)
+
+
+Started POST "/price_calculator/upload_csv" for 127.0.0.1 at 2025-10-24 12:09:45 +0530
+Processing by PriceCalculatorController#upload_csv as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x0000000126cd8670 @tempfile=#<Tempfile:/var/folders/pg/hjqjg2bd6n19jqmz8j5jjp2h0000gp/T/RackMultipart20251024-79237-vc5ptw.csv>, @content_type="text/csv", @original_filename="sample_products.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"sample_products.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload CSV"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (1.0ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 61]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 62]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (3.6ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 63]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 64]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 65]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 66]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 67]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 68]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 69]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 70]]
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:13:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Premium Widget"], ["level", "Gold"], ["dtp_price", 150.0], ["created_at", "2025-10-24 06:39:45.502094"], ["updated_at", "2025-10-24 06:39:45.502094"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Standard Widget"], ["level", "Silver"], ["dtp_price", 100.0], ["created_at", "2025-10-24 06:39:45.503690"], ["updated_at", "2025-10-24 06:39:45.503690"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Basic Widget"], ["level", "Bronze"], ["dtp_price", 75.0], ["created_at", "2025-10-24 06:39:45.508608"], ["updated_at", "2025-10-24 06:39:45.508608"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Deluxe Widget"], ["level", "Gold"], ["dtp_price", 200.0], ["created_at", "2025-10-24 06:39:45.509584"], ["updated_at", "2025-10-24 06:39:45.509584"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Economy Widget"], ["level", "Bronze"], ["dtp_price", 50.0], ["created_at", "2025-10-24 06:39:45.510517"], ["updated_at", "2025-10-24 06:39:45.510517"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Professional Widget"], ["level", "Silver"], ["dtp_price", 125.0], ["created_at", "2025-10-24 06:39:45.512657"], ["updated_at", "2025-10-24 06:39:45.512657"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Enterprise Widget"], ["level", "Gold"], ["dtp_price", 300.0], ["created_at", "2025-10-24 06:39:45.513697"], ["updated_at", "2025-10-24 06:39:45.513697"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Starter Widget"], ["level", "Bronze"], ["dtp_price", 60.0], ["created_at", "2025-10-24 06:39:45.514563"], ["updated_at", "2025-10-24 06:39:45.514563"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Advanced Widget"], ["level", "Silver"], ["dtp_price", 110.0], ["created_at", "2025-10-24 06:39:45.515403"], ["updated_at", "2025-10-24 06:39:45.515403"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Ultimate Widget"], ["level", "Gold"], ["dtp_price", 250.0], ["created_at", "2025-10-24 06:39:45.516702"], ["updated_at", "2025-10-24 06:39:45.516702"]]
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:19:in `block in upload_csv'
+  [1m[36mProduct Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:26:in `upload_csv'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 41ms (ActiveRecord: 14.0ms | Allocations: 29280)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-24 12:09:45 +0530
+Processing by PriceCalculatorController#index as TURBO_STREAM
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1017)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2910)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms | Allocations: 3523)
+
+
