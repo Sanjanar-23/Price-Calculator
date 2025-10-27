@@ -6,6 +6,9 @@ Rails.application.routes.draw do
       post :upload_csv
       get :levels
       get :products
+      get :part_numbers
+      get :search_products
+      get :search_part_numbers
     end
   end
 

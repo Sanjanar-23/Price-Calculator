@@ -1,11 +1,11 @@
-Product Name,Level,DTP Price
-Premium Widget,Gold,150.00
-Standard Widget,Silver,100.00
-Basic Widget,Bronze,75.00
-Deluxe Widget,Gold,200.00
-Economy Widget,Bronze,50.00
-Professional Widget,Silver,125.00
-Enterprise Widget,Gold,300.00
-Starter Widget,Bronze,60.00
-Advanced Widget,Silver,110.00
-Ultimate Widget,Gold,250.00
+Product Family,Level Detail,Unit DTP per Year / Per Txn
+Premium Widget,Level 1 1 - 9,150.00
+Standard Widget,Level 2 10 - 49,100.00
+Basic Widget,Level 3 50 - 99,75.00
+Deluxe Widget,Tier 1 1 to 999 Transactions,200.00
+Economy Widget,Tier 2 1000 to 2499 Transactions,50.00
+Professional Widget,Level 4 100+,125.00
+Enterprise Widget,Tier 3 2500 to 4999 Transactions,300.00
+Starter Widget,Level 12 10 - 49 (VIP Select 3 year commit),60.00
+Advanced Widget,Level 13 50 - 99 (VIP Select 3 year commit),110.00
+Ultimate Widget,Tier A 1 to 999 Transactions (VIP Select 3 year commit),250.00

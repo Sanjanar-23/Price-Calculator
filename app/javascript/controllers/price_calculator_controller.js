@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["anniversaryDate", "currentDate", "days", "level", "product", "dtpPrice", "price"]
+  static targets = ["anniversaryDate", "currentDate", "days", "level", "partNumber", "productName", "dtpPrice", "price"]
 
   connect() {
     // Set today's date as default
@@ -34,39 +34,89 @@ export default class extends Controller {
 
   loadProducts() {
     const level = this.levelTarget.value
-    const productSelect = this.productTarget
-
-    // Clear existing options
-    productSelect.innerHTML = '<option value="">Select Product</option>'
+    
+    // Clear searchable fields when level changes
+    this.partNumberTarget.value = ""
+    this.productNameTarget.value = ""
     this.dtpPriceTarget.value = ""
     this.priceTarget.value = ""
+    
+    // Hide suggestions
+    document.getElementById('part_number_suggestions').style.display = 'none'
+    document.getElementById('product_name_suggestions').style.display = 'none'
+  }
 
-    if (level) {
-      fetch(`/price_calculator/products?level=${encodeURIComponent(level)}`)
+  searchPartNumbers() {
+    const level = this.levelTarget.value
+    const query = this.partNumberTarget.value
+    const suggestions = document.getElementById('part_number_suggestions')
+    
+    if (level && query.length >= 2) {
+      fetch(`/price_calculator/search_part_numbers?level=${encodeURIComponent(level)}&query=${encodeURIComponent(query)}`)
         .then(response => response.json())
-        .then(products => {
-          products.forEach(product => {
-            const option = document.createElement('option')
-            option.value = product.dtp_price
-            option.textContent = product.name
-            option.dataset.dtpPrice = product.dtp_price
-            productSelect.appendChild(option)
-          })
+        .then(results => {
+          suggestions.innerHTML = ''
+          if (results.length > 0) {
+            results.forEach(item => {
+              const option = document.createElement('div')
+              option.className = 'dropdown-item'
+              option.innerHTML = `<strong>${item.part_number}</strong><br><small>${item.name}</small>`
+              option.addEventListener('click', () => {
+                this.partNumberTarget.value = item.part_number
+                this.productNameTarget.value = item.name
+                this.dtpPriceTarget.value = item.dtp_price
+                suggestions.style.display = 'none'
+                this.calculatePrice()
+              })
+              suggestions.appendChild(option)
+            })
+            suggestions.style.display = 'block'
+          } else {
+            suggestions.style.display = 'none'
+          }
         })
         .catch(error => {
-          console.error('Error loading products:', error)
+          console.error('Error searching part numbers:', error)
         })
+    } else {
+      suggestions.style.display = 'none'
     }
   }
 
-  updateDtpPrice() {
-    const selectedOption = this.productTarget.selectedOptions[0]
-    if (selectedOption && selectedOption.dataset.dtpPrice) {
-      this.dtpPriceTarget.value = selectedOption.dataset.dtpPrice
-      this.calculatePrice()
+  searchProducts() {
+    const level = this.levelTarget.value
+    const query = this.productNameTarget.value
+    const suggestions = document.getElementById('product_name_suggestions')
+    
+    if (level && query.length >= 2) {
+      fetch(`/price_calculator/search_products?level=${encodeURIComponent(level)}&query=${encodeURIComponent(query)}`)
+        .then(response => response.json())
+        .then(results => {
+          suggestions.innerHTML = ''
+          if (results.length > 0) {
+            results.forEach(item => {
+              const option = document.createElement('div')
+              option.className = 'dropdown-item'
+              option.innerHTML = `<strong>${item.name}</strong><br><small>Part: ${item.part_number}</small>`
+              option.addEventListener('click', () => {
+                this.productNameTarget.value = item.name
+                this.partNumberTarget.value = item.part_number
+                this.dtpPriceTarget.value = item.dtp_price
+                suggestions.style.display = 'none'
+                this.calculatePrice()
+              })
+              suggestions.appendChild(option)
+            })
+            suggestions.style.display = 'block'
+          } else {
+            suggestions.style.display = 'none'
+          }
+        })
+        .catch(error => {
+          console.error('Error searching products:', error)
+        })
     } else {
-      this.dtpPriceTarget.value = ""
-      this.priceTarget.value = ""
+      suggestions.style.display = 'none'
     }
   }
 
