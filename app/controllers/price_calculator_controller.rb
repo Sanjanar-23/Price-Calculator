@@ -27,13 +27,26 @@ class PriceCalculatorController < ApplicationController
         # Clear existing products
         Product.destroy_all
 
-        # Parse CSV file
-        csv_data = CSV.read(params[:csv_file].tempfile, headers: true)
+        # Parse CSV file - handle files with headers not on first row
+        csv_lines = File.readlines(params[:csv_file].tempfile)
+        
+        # Find the header row (contains "Product Family")
+        header_line_index = csv_lines.find_index { |line| line.include?("Product Family") }
+        
+        if header_line_index.nil?
+          raise "Could not find header row with 'Product Family' column"
+        end
+        
+        # Create a new CSV string starting from the header row
+        csv_content = csv_lines[header_line_index..-1].join
+        
+        # Parse the CSV content
+        csv_data = CSV.parse(csv_content, headers: true)
 
         csv_data.each_with_index do |row, index|
           # Read ONLY the specific columns you mentioned
           product_name = row['Product Family']
-          level_detail = row['Level Detail'] 
+          level_detail = row['Level Detail']
           dtp_price = row['Unit DTP per Year / Per Txn']
           part_number = row['Part Number']
 

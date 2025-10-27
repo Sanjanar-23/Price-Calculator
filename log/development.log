@@ -6354,3 +6354,209 @@ ActiveRecord::StatementInvalid (SQLite3::SQLException: near "ILIKE": syntax erro
 SELECT "products"."name", "products"."dtp_price", "products"."part_number" FROM "products" WHERE "products"."level" = ? AND (name ILIKE '%Education%')
                                                                                                                                   ^):
   
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:55:02 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (1.8ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1511)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 36216)
+Completed 200 OK in 27ms (Views: 23.1ms | ActiveRecord: 2.3ms | Allocations: 38703)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:55:02 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 997)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2859)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 3475)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:55:03 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 987)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 2848)
+Completed 200 OK in 18ms (Views: 13.5ms | ActiveRecord: 0.2ms | Allocations: 3464)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:55:03 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.3ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 993)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 2854)
+Completed 200 OK in 20ms (Views: 16.2ms | ActiveRecord: 0.3ms | Allocations: 3470)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:55:03 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 979)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2842)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 3458)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:55:03 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 993)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2854)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 3470)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:55:04 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 966)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2827)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.2ms | Allocations: 3443)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:55:04 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 997)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2859)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 3475)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:55:04 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 981)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2842)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.2ms | Allocations: 3458)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:55:04 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 990)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2851)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.1ms | Allocations: 3467)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:55:04 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 991)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2884)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.1ms | Allocations: 3501)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:55:04 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 987)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 2848)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 3464)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:55:05 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 987)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2848)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.2ms | Allocations: 3465)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:55:05 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 990)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2852)
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.2ms | Allocations: 3468)
+
+
+Started POST "/price_calculator/upload_csv" for 127.0.0.1 at 2025-10-27 11:55:11 +0530
+Processing by PriceCalculatorController#upload_csv as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x000000012e47dfe0 @tempfile=#<Tempfile:/var/folders/pg/hjqjg2bd6n19jqmz8j5jjp2h0000gp/T/RackMultipart20251027-28710-leu2ao.csv>, @content_type="text/csv", @original_filename="Test File.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"Test File.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload CSV"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:28:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:28:in `upload_csv'
+  [1m[36mProduct Destroy (1.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 81]]
+  ↳ app/controllers/price_calculator_controller.rb:28:in `upload_csv'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:28:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:28:in `upload_csv'
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 82]]
+  ↳ app/controllers/price_calculator_controller.rb:28:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:28:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:28:in `upload_csv'
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 83]]
+  ↳ app/controllers/price_calculator_controller.rb:28:in `upload_csv'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:28:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:28:in `upload_csv'
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 84]]
+  ↳ app/controllers/price_calculator_controller.rb:28:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:28:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:28:in `upload_csv'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 85]]
+  ↳ app/controllers/price_calculator_controller.rb:28:in `upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:28:in `upload_csv'
+  [1m[36mProduct Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:57:in `upload_csv'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 32ms (ActiveRecord: 4.2ms | Allocations: 51910)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:55:11 +0530
+Processing by PriceCalculatorController#index as TURBO_STREAM
+  [1m[36mProduct Pluck (0.0ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1020)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 2913)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 3560)
+
+
