@@ -26,21 +26,24 @@ class PriceCalculatorController < ApplicationController
       begin
         # Clear existing products
         Product.destroy_all
-        
+
         # Parse CSV file
         csv_data = CSV.read(params[:csv_file].tempfile, headers: true)
-        
+
         csv_data.each_with_index do |row, index|
           # Map columns with fallbacks
           product_name = row['Product Family'] || row['Product Name'] || row['product_name'] || row['Product']
           level_detail = row['Level Detail'] || row['Level'] || row['level']
           dtp_price = row['Unit DTP per Year / Per Txn'] || row['DTP Price'] || row['dtp_price'] || row['DTP']
           
+          # Skip rows with missing essential data
+          next if product_name.blank? || level_detail.blank? || dtp_price.blank?
+          
           # Normalize level using mapping table
-          normalized_level = LEVEL_MAPPING[level_detail] || level_detail
+          normalized_level = LEVEL_MAPPING[level_detail] || level_detail || "Unknown"
           
           # Generate part number (you can modify this logic as needed)
-          part_number = "PN-#{index + 1}-#{normalized_level.gsub(/\s+/, '')}"
+          part_number = "PN-#{index + 1}-#{normalized_level.to_s.gsub(/\s+/, '')}"
           
           Product.create!(
             name: product_name,
@@ -49,7 +52,7 @@ class PriceCalculatorController < ApplicationController
             part_number: part_number
           )
         end
-        
+
         flash[:success] = "CSV file uploaded successfully! #{Product.count} products imported with level normalization."
       rescue => e
         flash[:error] = "Error uploading CSV: #{e.message}"
@@ -57,7 +60,7 @@ class PriceCalculatorController < ApplicationController
     else
       flash[:error] = "Please select a CSV file to upload."
     end
-    
+
     redirect_to root_path
   end
 
@@ -79,7 +82,7 @@ class PriceCalculatorController < ApplicationController
   def search_products
     level = params[:level]
     query = params[:query]
-    
+
     if level.present? && query.present?
       @products = Product.where(level: level)
                         .where("name ILIKE ?", "%#{query}%")
@@ -93,7 +96,7 @@ class PriceCalculatorController < ApplicationController
   def search_part_numbers
     level = params[:level]
     query = params[:query]
-    
+
     if level.present? && query.present?
       @part_numbers = Product.where(level: level)
                             .where("part_number ILIKE ?", "%#{query}%")

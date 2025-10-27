@@ -34,13 +34,13 @@ export default class extends Controller {
 
   loadProducts() {
     const level = this.levelTarget.value
-    
+
     // Clear searchable fields when level changes
     this.partNumberTarget.value = ""
     this.productNameTarget.value = ""
     this.dtpPriceTarget.value = ""
     this.priceTarget.value = ""
-    
+
     // Hide suggestions
     document.getElementById('part_number_suggestions').style.display = 'none'
     document.getElementById('product_name_suggestions').style.display = 'none'
@@ -50,7 +50,7 @@ export default class extends Controller {
     const level = this.levelTarget.value
     const query = this.partNumberTarget.value
     const suggestions = document.getElementById('part_number_suggestions')
-    
+
     if (level && query.length >= 2) {
       fetch(`/price_calculator/search_part_numbers?level=${encodeURIComponent(level)}&query=${encodeURIComponent(query)}`)
         .then(response => response.json())
@@ -87,7 +87,7 @@ export default class extends Controller {
     const level = this.levelTarget.value
     const query = this.productNameTarget.value
     const suggestions = document.getElementById('product_name_suggestions')
-    
+
     if (level && query.length >= 2) {
       fetch(`/price_calculator/search_products?level=${encodeURIComponent(level)}&query=${encodeURIComponent(query)}`)
         .then(response => response.json())
