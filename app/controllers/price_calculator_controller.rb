@@ -30,21 +30,30 @@ class PriceCalculatorController < ApplicationController
         # Parse CSV file
         csv_data = CSV.read(params[:csv_file].tempfile, headers: true)
 
+        # Debug: Log the headers to see what columns are available
+        Rails.logger.info "CSV Headers: #{csv_data.headers.inspect}"
+
         csv_data.each_with_index do |row, index|
-          # Map columns with fallbacks
-          product_name = row['Product Family'] || row['Product Name'] || row['product_name'] || row['Product']
-          level_detail = row['Level Detail'] || row['Level'] || row['level']
-          dtp_price = row['Unit DTP per Year / Per Txn'] || row['DTP Price'] || row['dtp_price'] || row['DTP']
-          
+          # Debug: Log each row to see the data
+          Rails.logger.info "Row #{index}: #{row.to_h.inspect}"
+
+          # Map columns with fallbacks - try multiple variations including your actual CSV structure
+          product_name = row['Product Family'] || row['Product Name'] || row['product_name'] || row['Product'] || row['product_family'] || row['product'] || row['Table 1']
+          level_detail = row['Level Detail'] || row['Level'] || row['level'] || row['level_detail'] || row['tier'] || row['Table 2']
+          dtp_price = row['Unit DTP per Year / Per Txn'] || row['DTP Price'] || row['dtp_price'] || row['DTP'] || row['unit_dtp_per_year'] || row['price'] || row['Table 3']
+
+          # Debug: Log the extracted values
+          Rails.logger.info "Extracted - Product: '#{product_name}', Level: '#{level_detail}', DTP: '#{dtp_price}'"
+
           # Skip rows with missing essential data
           next if product_name.blank? || level_detail.blank? || dtp_price.blank?
-          
+
           # Normalize level using mapping table
           normalized_level = LEVEL_MAPPING[level_detail] || level_detail || "Unknown"
-          
+
           # Generate part number (you can modify this logic as needed)
           part_number = "PN-#{index + 1}-#{normalized_level.to_s.gsub(/\s+/, '')}"
-          
+
           Product.create!(
             name: product_name,
             level: normalized_level,
