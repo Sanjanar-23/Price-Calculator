@@ -30,21 +30,12 @@ class PriceCalculatorController < ApplicationController
         # Parse CSV file
         csv_data = CSV.read(params[:csv_file].tempfile, headers: true)
 
-        # Debug: Log the headers to see what columns are available
-        Rails.logger.info "CSV Headers: #{csv_data.headers.inspect}"
-
         csv_data.each_with_index do |row, index|
-          # Debug: Log each row to see the data
-          Rails.logger.info "Row #{index}: #{row.to_h.inspect}"
-
           # Read ONLY the specific columns you mentioned
           product_name = row['Product Family']
-          level_detail = row['Level Detail']
+          level_detail = row['Level Detail'] 
           dtp_price = row['Unit DTP per Year / Per Txn']
           part_number = row['Part Number']
-
-          # Debug: Log the extracted values
-          Rails.logger.info "Extracted - Product: '#{product_name}', Level: '#{level_detail}', DTP: '#{dtp_price}', Part Number: '#{part_number}'"
 
           # Skip rows with missing essential data
           next if product_name.blank? || level_detail.blank? || dtp_price.blank?
