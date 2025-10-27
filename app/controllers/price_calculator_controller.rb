@@ -30,8 +30,14 @@ class PriceCalculatorController < ApplicationController
         # Parse CSV file - handle files with headers not on first row
         csv_lines = File.readlines(params[:csv_file].tempfile)
         
+        # Debug: Log first few lines
+        Rails.logger.info "First 5 lines of CSV:"
+        csv_lines[0..4].each_with_index { |line, i| Rails.logger.info "Line #{i}: #{line.strip}" }
+        
         # Find the header row (contains "Product Family")
         header_line_index = csv_lines.find_index { |line| line.include?("Product Family") }
+        
+        Rails.logger.info "Header line index: #{header_line_index}"
         
         if header_line_index.nil?
           raise "Could not find header row with 'Product Family' column"
@@ -42,13 +48,26 @@ class PriceCalculatorController < ApplicationController
         
         # Parse the CSV content
         csv_data = CSV.parse(csv_content, headers: true)
+        
+        Rails.logger.info "CSV headers found: #{csv_data.headers.inspect}"
+        Rails.logger.info "Number of data rows: #{csv_data.length}"
 
         csv_data.each_with_index do |row, index|
+          # Debug: Log first few rows
+          if index < 3
+            Rails.logger.info "Row #{index}: #{row.to_h.inspect}"
+          end
+          
           # Read ONLY the specific columns you mentioned
           product_name = row['Product Family']
-          level_detail = row['Level Detail']
+          level_detail = row['Level Detail'] 
           dtp_price = row['Unit DTP per Year / Per Txn']
           part_number = row['Part Number']
+
+          # Debug: Log extracted values for first few rows
+          if index < 3
+            Rails.logger.info "Extracted - Product: '#{product_name}', Level: '#{level_detail}', DTP: '#{dtp_price}', Part Number: '#{part_number}'"
+          end
 
           # Skip rows with missing essential data
           next if product_name.blank? || level_detail.blank? || dtp_price.blank?
