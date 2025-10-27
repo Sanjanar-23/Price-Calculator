@@ -6685,3 +6685,345 @@ Processing by PriceCalculatorController#index as HTML
 Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 3314)
 
 
+Started GET "/" for ::1 at 2025-10-27 11:58:04 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1460)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 36163)
+Completed 200 OK in 21ms (Views: 17.1ms | ActiveRecord: 1.1ms | Allocations: 38892)
+
+
+Started GET "/" for ::1 at 2025-10-27 11:58:04 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 922)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 2785)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 3385)
+
+
+Started GET "/" for ::1 at 2025-10-27 11:58:04 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 933)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2794)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.2ms | Allocations: 3393)
+
+
+Started GET "/" for ::1 at 2025-10-27 11:58:04 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 924)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2785)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.2ms | Allocations: 3384)
+
+
+Started GET "/" for ::1 at 2025-10-27 11:58:05 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 927)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2788)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 3387)
+
+
+Started GET "/" for ::1 at 2025-10-27 11:58:05 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 921)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2782)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.2ms | Allocations: 3381)
+
+
+Started GET "/" for ::1 at 2025-10-27 11:58:05 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 924)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2785)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 3384)
+
+
+Started POST "/price_calculator/upload_csv" for ::1 at 2025-10-27 11:58:17 +0530
+Processing by PriceCalculatorController#upload_csv as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x000000012c29fc48 @tempfile=#<Tempfile:/var/folders/pg/hjqjg2bd6n19jqmz8j5jjp2h0000gp/T/RackMultipart20251027-28710-y62yq0.csv>, @content_type="text/csv", @original_filename="Test File.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"Test File.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload CSV"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:28:in `upload_csv'
+First 5 lines of CSV:
+Line 0: Table 1
+Line 1: Oct-25,,,,,,,,,,,,,,,,,,,,,,,,,,
+Line 2: ,,,,,,,,,,,,,,,,,,,,,,,,,,
+Line 3: Segment,ACD Indicator,ACD Description,ACD Effective Date,First Order Date,Last Order Date,Estimated Ship Date,Public Announce Date,RMA Request Deadline,Part Number,Product Family,Version,Operating System,Language,Product Type,Product Type Detail,Additional Detail,Users,Metric,Level Detail,Duration,UPC/EAN Code,Pool,Points,Unit DTP per Year/ Per Txn,Unit ESP per Year / PerTxn,Remarks
+Line 4: Education,Add,New Part Number,8/29/2025,1/10/25,,,,,30013111CB01A12,"2,000 Monthly Generative Credits for Enterprise",ALL,Other,Multi Asian Languages,Enterprise Hosted Subscription New,Annual,HED Fac/Staff,Named,,Level 1 1 - 9,12 Months,5051254779056,Application,0,8288,9046,
+Header line index: 3
+CSV headers found: ["Segment", "ACD Indicator", "ACD Description", "ACD Effective Date", "First Order Date", "Last Order Date", "Estimated Ship Date", "Public Announce Date", "RMA Request Deadline", "Part Number", "Product Family", "Version", "Operating System", "Language", "Product Type", "Product Type Detail", "Additional Detail", "Users", "Metric", "Level Detail", "Duration", "UPC/EAN Code", "Pool", "Points", "Unit DTP per Year/ Per Txn", "Unit ESP per Year / PerTxn", "Remarks"]
+Number of data rows: 423
+Row 0: {"Segment"=>"Education", "ACD Indicator"=>"Add", "ACD Description"=>"New Part Number", "ACD Effective Date"=>"8/29/2025", "First Order Date"=>"1/10/25", "Last Order Date"=>nil, "Estimated Ship Date"=>nil, "Public Announce Date"=>nil, "RMA Request Deadline"=>nil, "Part Number"=>"30013111CB01A12", "Product Family"=>"2,000 Monthly Generative Credits for Enterprise", "Version"=>"ALL", "Operating System"=>"Other", "Language"=>"Multi Asian Languages", "Product Type"=>"Enterprise Hosted Subscription New", "Product Type Detail"=>"Annual", "Additional Detail"=>"HED Fac/Staff", "Users"=>"Named", "Metric"=>nil, "Level Detail"=>"Level 1 1 - 9", "Duration"=>"12 Months", "UPC/EAN Code"=>"5051254779056", "Pool"=>"Application", "Points"=>"0", "Unit DTP per Year/ Per Txn"=>"8288", "Unit ESP per Year / PerTxn"=>"9046", "Remarks"=>nil}
+Extracted - Product: '2,000 Monthly Generative Credits for Enterprise', Level: 'Level 1 1 - 9', DTP: '', Part Number: '30013111CB01A12'
+Row 1: {"Segment"=>"Education", "ACD Indicator"=>"Add", "ACD Description"=>"New Part Number", "ACD Effective Date"=>"8/29/2025", "First Order Date"=>"1/10/25", "Last Order Date"=>nil, "Estimated Ship Date"=>nil, "Public Announce Date"=>nil, "RMA Request Deadline"=>nil, "Part Number"=>"30013048CB01A12", "Product Family"=>"2,000 Monthly Generative Credits for Enterprise", "Version"=>"ALL", "Operating System"=>"Other", "Language"=>"Multi Asian Languages", "Product Type"=>"Enterprise Hosted Subscription New", "Product Type Detail"=>"Annual", "Additional Detail"=>"HED Student", "Users"=>"Named", "Metric"=>nil, "Level Detail"=>"Level 1 1 - 9", "Duration"=>"12 Months", "UPC/EAN Code"=>"5051254778516", "Pool"=>"Application", "Points"=>"0", "Unit DTP per Year/ Per Txn"=>"8288", "Unit ESP per Year / PerTxn"=>"9046", "Remarks"=>nil}
+Extracted - Product: '2,000 Monthly Generative Credits for Enterprise', Level: 'Level 1 1 - 9', DTP: '', Part Number: '30013048CB01A12'
+Row 2: {"Segment"=>"Education", "ACD Indicator"=>"Add", "ACD Description"=>"New Part Number", "ACD Effective Date"=>"8/29/2025", "First Order Date"=>"1/10/25", "Last Order Date"=>nil, "Estimated Ship Date"=>nil, "Public Announce Date"=>nil, "RMA Request Deadline"=>nil, "Part Number"=>"30013111CB02A12", "Product Family"=>"2,000 Monthly Generative Credits for Enterprise", "Version"=>"ALL", "Operating System"=>"Other", "Language"=>"Multi Asian Languages", "Product Type"=>"Enterprise Hosted Subscription New", "Product Type Detail"=>"Annual", "Additional Detail"=>"HED Fac/Staff", "Users"=>"Named", "Metric"=>nil, "Level Detail"=>"Level 2 10 - 49", "Duration"=>"12 Months", "UPC/EAN Code"=>"5051254779056", "Pool"=>"Application", "Points"=>"0", "Unit DTP per Year/ Per Txn"=>"8288", "Unit ESP per Year / PerTxn"=>"9046", "Remarks"=>nil}
+Extracted - Product: '2,000 Monthly Generative Credits for Enterprise', Level: 'Level 2 10 - 49', DTP: '', Part Number: '30013111CB02A12'
+  [1m[36mProduct Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:89:in `upload_csv'
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms (ActiveRecord: 0.5ms | Allocations: 42338)
+
+
+Started GET "/" for ::1 at 2025-10-27 11:58:17 +0530
+Processing by PriceCalculatorController#index as TURBO_STREAM
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 939)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2800)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 3446)
+
+
+Started POST "/price_calculator/upload_csv" for ::1 at 2025-10-27 12:18:56 +0530
+Processing by PriceCalculatorController#upload_csv as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x000000012e0d2620 @tempfile=#<Tempfile:/var/folders/pg/hjqjg2bd6n19jqmz8j5jjp2h0000gp/T/RackMultipart20251027-28710-yztnqk.csv>, @content_type="text/csv", @original_filename="Test File.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"Test File.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload CSV"}
+  [1m[36mProduct Load (2.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:28:in `upload_csv'
+First 5 lines of CSV:
+Line 0: Table 1
+Line 1: Oct-25,,,,,,,,,,,,,,,,,,,,,,,,,,
+Line 2: ,,,,,,,,,,,,,,,,,,,,,,,,,,
+Line 3: Segment,ACD Indicator,ACD Description,ACD Effective Date,First Order Date,Last Order Date,Estimated Ship Date,Public Announce Date,RMA Request Deadline,Part Number,Product Family,Version,Operating System,Language,Product Type,Product Type Detail,Additional Detail,Users,Metric,Level Detail,Duration,UPC/EAN Code,Pool,Points,Unit DTP per Year/ Per Txn,Unit ESP per Year / PerTxn,Remarks
+Line 4: Education,Add,New Part Number,8/29/2025,1/10/25,,,,,30013111CB01A12,"2,000 Monthly Generative Credits for Enterprise",ALL,Other,Multi Asian Languages,Enterprise Hosted Subscription New,Annual,HED Fac/Staff,Named,,Level 1 1 - 9,12 Months,5051254779056,Application,0,8288,9046,
+Header line index: 3
+CSV headers found: ["Segment", "ACD Indicator", "ACD Description", "ACD Effective Date", "First Order Date", "Last Order Date", "Estimated Ship Date", "Public Announce Date", "RMA Request Deadline", "Part Number", "Product Family", "Version", "Operating System", "Language", "Product Type", "Product Type Detail", "Additional Detail", "Users", "Metric", "Level Detail", "Duration", "UPC/EAN Code", "Pool", "Points", "Unit DTP per Year/ Per Txn", "Unit ESP per Year / PerTxn", "Remarks"]
+Number of data rows: 423
+Row 0: {"Segment"=>"Education", "ACD Indicator"=>"Add", "ACD Description"=>"New Part Number", "ACD Effective Date"=>"8/29/2025", "First Order Date"=>"1/10/25", "Last Order Date"=>nil, "Estimated Ship Date"=>nil, "Public Announce Date"=>nil, "RMA Request Deadline"=>nil, "Part Number"=>"30013111CB01A12", "Product Family"=>"2,000 Monthly Generative Credits for Enterprise", "Version"=>"ALL", "Operating System"=>"Other", "Language"=>"Multi Asian Languages", "Product Type"=>"Enterprise Hosted Subscription New", "Product Type Detail"=>"Annual", "Additional Detail"=>"HED Fac/Staff", "Users"=>"Named", "Metric"=>nil, "Level Detail"=>"Level 1 1 - 9", "Duration"=>"12 Months", "UPC/EAN Code"=>"5051254779056", "Pool"=>"Application", "Points"=>"0", "Unit DTP per Year/ Per Txn"=>"8288", "Unit ESP per Year / PerTxn"=>"9046", "Remarks"=>nil}
+Extracted - Product: '2,000 Monthly Generative Credits for Enterprise', Level: 'Level 1 1 - 9', DTP: '', Part Number: '30013111CB01A12'
+Row 1: {"Segment"=>"Education", "ACD Indicator"=>"Add", "ACD Description"=>"New Part Number", "ACD Effective Date"=>"8/29/2025", "First Order Date"=>"1/10/25", "Last Order Date"=>nil, "Estimated Ship Date"=>nil, "Public Announce Date"=>nil, "RMA Request Deadline"=>nil, "Part Number"=>"30013048CB01A12", "Product Family"=>"2,000 Monthly Generative Credits for Enterprise", "Version"=>"ALL", "Operating System"=>"Other", "Language"=>"Multi Asian Languages", "Product Type"=>"Enterprise Hosted Subscription New", "Product Type Detail"=>"Annual", "Additional Detail"=>"HED Student", "Users"=>"Named", "Metric"=>nil, "Level Detail"=>"Level 1 1 - 9", "Duration"=>"12 Months", "UPC/EAN Code"=>"5051254778516", "Pool"=>"Application", "Points"=>"0", "Unit DTP per Year/ Per Txn"=>"8288", "Unit ESP per Year / PerTxn"=>"9046", "Remarks"=>nil}
+Extracted - Product: '2,000 Monthly Generative Credits for Enterprise', Level: 'Level 1 1 - 9', DTP: '', Part Number: '30013048CB01A12'
+Row 2: {"Segment"=>"Education", "ACD Indicator"=>"Add", "ACD Description"=>"New Part Number", "ACD Effective Date"=>"8/29/2025", "First Order Date"=>"1/10/25", "Last Order Date"=>nil, "Estimated Ship Date"=>nil, "Public Announce Date"=>nil, "RMA Request Deadline"=>nil, "Part Number"=>"30013111CB02A12", "Product Family"=>"2,000 Monthly Generative Credits for Enterprise", "Version"=>"ALL", "Operating System"=>"Other", "Language"=>"Multi Asian Languages", "Product Type"=>"Enterprise Hosted Subscription New", "Product Type Detail"=>"Annual", "Additional Detail"=>"HED Fac/Staff", "Users"=>"Named", "Metric"=>nil, "Level Detail"=>"Level 2 10 - 49", "Duration"=>"12 Months", "UPC/EAN Code"=>"5051254779056", "Pool"=>"Application", "Points"=>"0", "Unit DTP per Year/ Per Txn"=>"8288", "Unit ESP per Year / PerTxn"=>"9046", "Remarks"=>nil}
+Extracted - Product: '2,000 Monthly Generative Credits for Enterprise', Level: 'Level 2 10 - 49', DTP: '', Part Number: '30013111CB02A12'
+  [1m[36mProduct Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:89:in `upload_csv'
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms (ActiveRecord: 4.2ms | Allocations: 42460)
+
+
+Started GET "/" for ::1 at 2025-10-27 12:18:56 +0530
+Processing by PriceCalculatorController#index as TURBO_STREAM
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 944)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2805)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 3414)
+
+
+Started GET "/" for ::1 at 2025-10-27 12:19:00 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 909)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2770)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 3369)
+
+
+Started GET "/" for ::1 at 2025-10-27 12:19:00 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 915)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2776)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 3375)
+
+
+Started GET "/" for ::1 at 2025-10-27 12:19:00 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 921)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2782)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 3381)
+
+
+Started GET "/" for ::1 at 2025-10-27 12:19:01 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 919)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2812)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 3412)
+
+
+Started GET "/" for ::1 at 2025-10-27 12:19:01 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 936)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2828)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.1ms | Allocations: 3428)
+
+
+Started GET "/" for ::1 at 2025-10-27 12:19:01 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 937)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2798)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.2ms | Allocations: 3397)
+
+
+Started GET "/" for ::1 at 2025-10-27 12:19:55 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.4ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 933)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 2795)
+Completed 200 OK in 16ms (Views: 11.9ms | ActiveRecord: 0.3ms | Allocations: 3394)
+
+
+Started GET "/" for ::1 at 2025-10-27 12:19:55 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 924)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 2785)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.1ms | Allocations: 3384)
+
+
+Started GET "/" for ::1 at 2025-10-27 12:19:55 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 930)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2791)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.2ms | Allocations: 3390)
+
+
+Started GET "/" for ::1 at 2025-10-27 12:19:55 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 909)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 2770)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms | Allocations: 3369)
+
+
+Started GET "/" for ::1 at 2025-10-27 12:19:57 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 918)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 2779)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 3378)
+
+
+Started GET "/" for ::1 at 2025-10-27 12:19:57 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 927)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2788)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 3387)
+
+
+Started GET "/" for ::1 at 2025-10-27 12:19:57 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 910)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 2801)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 3401)
+
+
+Started GET "/" for ::1 at 2025-10-27 12:19:57 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 915)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2776)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms | Allocations: 3375)
+
+
+Started POST "/price_calculator/upload_csv" for ::1 at 2025-10-27 12:20:05 +0530
+Processing by PriceCalculatorController#upload_csv as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x000000012cdb0600 @tempfile=#<Tempfile:/var/folders/pg/hjqjg2bd6n19jqmz8j5jjp2h0000gp/T/RackMultipart20251027-28710-36mwty.csv>, @content_type="text/csv", @original_filename="Test File.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"Test File.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload CSV"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:28:in `upload_csv'
+First 5 lines of CSV:
+Line 0: Table 1
+Line 1: Oct-25,,,,,,,,,,,,,,,,,,,,,,,,,,
+Line 2: ,,,,,,,,,,,,,,,,,,,,,,,,,,
+Line 3: Segment,ACD Indicator,ACD Description,ACD Effective Date,First Order Date,Last Order Date,Estimated Ship Date,Public Announce Date,RMA Request Deadline,Part Number,Product Family,Version,Operating System,Language,Product Type,Product Type Detail,Additional Detail,Users,Metric,Level Detail,Duration,UPC/EAN Code,Pool,Points,Unit DTP per Year/ Per Txn,Unit ESP per Year / PerTxn,Remarks
+Line 4: Education,Add,New Part Number,8/29/2025,1/10/25,,,,,30013111CB01A12,"2,000 Monthly Generative Credits for Enterprise",ALL,Other,Multi Asian Languages,Enterprise Hosted Subscription New,Annual,HED Fac/Staff,Named,,Level 1 1 - 9,12 Months,5051254779056,Application,0,8288,9046,
+Header line index: 3
+CSV headers found: ["Segment", "ACD Indicator", "ACD Description", "ACD Effective Date", "First Order Date", "Last Order Date", "Estimated Ship Date", "Public Announce Date", "RMA Request Deadline", "Part Number", "Product Family", "Version", "Operating System", "Language", "Product Type", "Product Type Detail", "Additional Detail", "Users", "Metric", "Level Detail", "Duration", "UPC/EAN Code", "Pool", "Points", "Unit DTP per Year/ Per Txn", "Unit ESP per Year / PerTxn", "Remarks"]
+Number of data rows: 423
+Row 0: {"Segment"=>"Education", "ACD Indicator"=>"Add", "ACD Description"=>"New Part Number", "ACD Effective Date"=>"8/29/2025", "First Order Date"=>"1/10/25", "Last Order Date"=>nil, "Estimated Ship Date"=>nil, "Public Announce Date"=>nil, "RMA Request Deadline"=>nil, "Part Number"=>"30013111CB01A12", "Product Family"=>"2,000 Monthly Generative Credits for Enterprise", "Version"=>"ALL", "Operating System"=>"Other", "Language"=>"Multi Asian Languages", "Product Type"=>"Enterprise Hosted Subscription New", "Product Type Detail"=>"Annual", "Additional Detail"=>"HED Fac/Staff", "Users"=>"Named", "Metric"=>nil, "Level Detail"=>"Level 1 1 - 9", "Duration"=>"12 Months", "UPC/EAN Code"=>"5051254779056", "Pool"=>"Application", "Points"=>"0", "Unit DTP per Year/ Per Txn"=>"8288", "Unit ESP per Year / PerTxn"=>"9046", "Remarks"=>nil}
+Extracted - Product: '2,000 Monthly Generative Credits for Enterprise', Level: 'Level 1 1 - 9', DTP: '', Part Number: '30013111CB01A12'
+Row 1: {"Segment"=>"Education", "ACD Indicator"=>"Add", "ACD Description"=>"New Part Number", "ACD Effective Date"=>"8/29/2025", "First Order Date"=>"1/10/25", "Last Order Date"=>nil, "Estimated Ship Date"=>nil, "Public Announce Date"=>nil, "RMA Request Deadline"=>nil, "Part Number"=>"30013048CB01A12", "Product Family"=>"2,000 Monthly Generative Credits for Enterprise", "Version"=>"ALL", "Operating System"=>"Other", "Language"=>"Multi Asian Languages", "Product Type"=>"Enterprise Hosted Subscription New", "Product Type Detail"=>"Annual", "Additional Detail"=>"HED Student", "Users"=>"Named", "Metric"=>nil, "Level Detail"=>"Level 1 1 - 9", "Duration"=>"12 Months", "UPC/EAN Code"=>"5051254778516", "Pool"=>"Application", "Points"=>"0", "Unit DTP per Year/ Per Txn"=>"8288", "Unit ESP per Year / PerTxn"=>"9046", "Remarks"=>nil}
+Extracted - Product: '2,000 Monthly Generative Credits for Enterprise', Level: 'Level 1 1 - 9', DTP: '', Part Number: '30013048CB01A12'
+Row 2: {"Segment"=>"Education", "ACD Indicator"=>"Add", "ACD Description"=>"New Part Number", "ACD Effective Date"=>"8/29/2025", "First Order Date"=>"1/10/25", "Last Order Date"=>nil, "Estimated Ship Date"=>nil, "Public Announce Date"=>nil, "RMA Request Deadline"=>nil, "Part Number"=>"30013111CB02A12", "Product Family"=>"2,000 Monthly Generative Credits for Enterprise", "Version"=>"ALL", "Operating System"=>"Other", "Language"=>"Multi Asian Languages", "Product Type"=>"Enterprise Hosted Subscription New", "Product Type Detail"=>"Annual", "Additional Detail"=>"HED Fac/Staff", "Users"=>"Named", "Metric"=>nil, "Level Detail"=>"Level 2 10 - 49", "Duration"=>"12 Months", "UPC/EAN Code"=>"5051254779056", "Pool"=>"Application", "Points"=>"0", "Unit DTP per Year/ Per Txn"=>"8288", "Unit ESP per Year / PerTxn"=>"9046", "Remarks"=>nil}
+Extracted - Product: '2,000 Monthly Generative Credits for Enterprise', Level: 'Level 2 10 - 49', DTP: '', Part Number: '30013111CB02A12'
+  [1m[36mProduct Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:89:in `upload_csv'
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 0.1ms | Allocations: 42241)
+
+
+Started GET "/" for ::1 at 2025-10-27 12:20:05 +0530
+Processing by PriceCalculatorController#index as TURBO_STREAM
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 943)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2836)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 3439)
+
+

@@ -29,26 +29,26 @@ class PriceCalculatorController < ApplicationController
 
         # Parse CSV file - handle files with headers not on first row
         csv_lines = File.readlines(params[:csv_file].tempfile)
-        
+
         # Debug: Log first few lines
         Rails.logger.info "First 5 lines of CSV:"
         csv_lines[0..4].each_with_index { |line, i| Rails.logger.info "Line #{i}: #{line.strip}" }
-        
+
         # Find the header row (contains "Product Family")
         header_line_index = csv_lines.find_index { |line| line.include?("Product Family") }
-        
+
         Rails.logger.info "Header line index: #{header_line_index}"
-        
+
         if header_line_index.nil?
           raise "Could not find header row with 'Product Family' column"
         end
-        
+
         # Create a new CSV string starting from the header row
         csv_content = csv_lines[header_line_index..-1].join
-        
+
         # Parse the CSV content
         csv_data = CSV.parse(csv_content, headers: true)
-        
+
         Rails.logger.info "CSV headers found: #{csv_data.headers.inspect}"
         Rails.logger.info "Number of data rows: #{csv_data.length}"
 
@@ -57,11 +57,11 @@ class PriceCalculatorController < ApplicationController
           if index < 3
             Rails.logger.info "Row #{index}: #{row.to_h.inspect}"
           end
-          
+
           # Read ONLY the specific columns you mentioned
           product_name = row['Product Family']
           level_detail = row['Level Detail'] 
-          dtp_price = row['Unit DTP per Year / Per Txn']
+          dtp_price = row['Unit DTP per Year/ Per Txn']  # Fixed: space BEFORE slash
           part_number = row['Part Number']
 
           # Debug: Log extracted values for first few rows
