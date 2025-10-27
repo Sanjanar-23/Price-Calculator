@@ -60,7 +60,7 @@ class PriceCalculatorController < ApplicationController
 
           # Read ONLY the specific columns you mentioned
           product_name = row['Product Family']
-          level_detail = row['Level Detail'] 
+          level_detail = row['Level Detail']
           dtp_price = row['Unit DTP per Year/ Per Txn']  # Fixed: space BEFORE slash
           part_number = row['Part Number']
 
@@ -78,12 +78,22 @@ class PriceCalculatorController < ApplicationController
           # Use Part Number from CSV if available, otherwise generate one
           final_part_number = part_number.present? ? part_number : "PN-#{index + 1}-#{normalized_level.to_s.gsub(/\s+/, '')}"
 
-          Product.create!(
-            name: product_name,
-            level: normalized_level,
-            dtp_price: dtp_price,
-            part_number: final_part_number
-          )
+          # Create product, skip if part number already exists
+          begin
+            Product.create!(
+              name: product_name,
+              level: normalized_level,
+              dtp_price: dtp_price,
+              part_number: final_part_number
+            )
+          rescue ActiveRecord::RecordInvalid => e
+            if e.message.include?("Part number has already been taken")
+              Rails.logger.info "Skipping duplicate part number: #{final_part_number}"
+              next
+            else
+              raise e
+            end
+          end
         end
 
         flash[:success] = "CSV file uploaded successfully! #{Product.count} products imported with level normalization."
