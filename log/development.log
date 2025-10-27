@@ -5338,3 +5338,1019 @@ Processing by PriceCalculatorController#index as HTML
 Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.1ms | Allocations: 3456)
 
 
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:44:42 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1497)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 36148)
+Completed 200 OK in 27ms (Views: 19.1ms | ActiveRecord: 1.4ms | Allocations: 38876)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:44:42 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 975)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 2840)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.1ms | Allocations: 3439)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:44:43 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 983)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2844)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 3443)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:44:43 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 980)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 2841)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.1ms | Allocations: 3440)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:44:43 +0530
+Processing by PriceCalculatorController#index as HTML
+  [1m[36mProduct Pluck (0.2ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 977)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 2838)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.2ms | Allocations: 3437)
+
+
+Started POST "/price_calculator/upload_csv" for 127.0.0.1 at 2025-10-27 11:44:58 +0530
+Processing by PriceCalculatorController#upload_csv as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x000000012e17ba90 @tempfile=#<Tempfile:/var/folders/pg/hjqjg2bd6n19jqmz8j5jjp2h0000gp/T/RackMultipart20251027-28710-hv4vbr.csv>, @content_type="text/csv", @original_filename="Test File.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"Test File.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload CSV"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:28:in `upload_csv'
+CSV Headers: ["Table 1", nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil, nil]
+Row 0: {"Table 1"=>"Oct-25", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 1: {"Table 1"=>nil, nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 2: {"Table 1"=>"Segment", nil=>"ACD Indicator"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 3: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 4: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 5: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 6: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 7: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 8: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 9: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 10: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 11: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 12: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 13: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 14: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 15: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 16: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 17: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 18: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 19: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 20: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 21: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 22: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 23: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 24: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 25: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 26: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 27: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 28: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 29: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 30: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 31: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 32: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 33: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 34: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 35: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 36: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 37: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 38: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 39: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 40: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 41: {"Table 1"=>"Education", nil=>"Add"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 42: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 43: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 44: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 45: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 46: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 47: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 48: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 49: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 50: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 51: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 52: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 53: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 54: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 55: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 56: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 57: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 58: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 59: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 60: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 61: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 62: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 63: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 64: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 65: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 66: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 67: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 68: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 69: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 70: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 71: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 72: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 73: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 74: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 75: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 76: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 77: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 78: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 79: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 80: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 81: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 82: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 83: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 84: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 85: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 86: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 87: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 88: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 89: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 90: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 91: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 92: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 93: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 94: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 95: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 96: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 97: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 98: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 99: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 100: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 101: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 102: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 103: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 104: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 105: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 106: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 107: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 108: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 109: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 110: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 111: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 112: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 113: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 114: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 115: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 116: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 117: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 118: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 119: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 120: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 121: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 122: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 123: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 124: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 125: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 126: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 127: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 128: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 129: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 130: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 131: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 132: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 133: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 134: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 135: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 136: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 137: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 138: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 139: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 140: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 141: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 142: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 143: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 144: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 145: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 146: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 147: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 148: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 149: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 150: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 151: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 152: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 153: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 154: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 155: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 156: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 157: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 158: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 159: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 160: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 161: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 162: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 163: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 164: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 165: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 166: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 167: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 168: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 169: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 170: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 171: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 172: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 173: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 174: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 175: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 176: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 177: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 178: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 179: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 180: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 181: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 182: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 183: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 184: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 185: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 186: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 187: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 188: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 189: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 190: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 191: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 192: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 193: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 194: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 195: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 196: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 197: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 198: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 199: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 200: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 201: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 202: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 203: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 204: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 205: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 206: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 207: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 208: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 209: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 210: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 211: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 212: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 213: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 214: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 215: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 216: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 217: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 218: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 219: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 220: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 221: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 222: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 223: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 224: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 225: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 226: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 227: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 228: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 229: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 230: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 231: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 232: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 233: {"Table 1"=>"Education", nil=>"Change"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 234: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 235: {"Table 1"=>"Education", nil=>"Change"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 236: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 237: {"Table 1"=>"Education", nil=>"Change"}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 238: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 239: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 240: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 241: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 242: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 243: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 244: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 245: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 246: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 247: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 248: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 249: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 250: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 251: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 252: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 253: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 254: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 255: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 256: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 257: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 258: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 259: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 260: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 261: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 262: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 263: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 264: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 265: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 266: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 267: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 268: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 269: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 270: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 271: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 272: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 273: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 274: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 275: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 276: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 277: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 278: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 279: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 280: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 281: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 282: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 283: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 284: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 285: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 286: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 287: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 288: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 289: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 290: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 291: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 292: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 293: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 294: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 295: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 296: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 297: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 298: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 299: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 300: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 301: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 302: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 303: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 304: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 305: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 306: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 307: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 308: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 309: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 310: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 311: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 312: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 313: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 314: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 315: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 316: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 317: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 318: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 319: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 320: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 321: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 322: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 323: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 324: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 325: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 326: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 327: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 328: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 329: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 330: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 331: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 332: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 333: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 334: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 335: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 336: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 337: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 338: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 339: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 340: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 341: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 342: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 343: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 344: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 345: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 346: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 347: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 348: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 349: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 350: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 351: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 352: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 353: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 354: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 355: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 356: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 357: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 358: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 359: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 360: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 361: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 362: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 363: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 364: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 365: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 366: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 367: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 368: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 369: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 370: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 371: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 372: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 373: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 374: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 375: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 376: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 377: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 378: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 379: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 380: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 381: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 382: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 383: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 384: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 385: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 386: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 387: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 388: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 389: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 390: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 391: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 392: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 393: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 394: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 395: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 396: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 397: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 398: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 399: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 400: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 401: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 402: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 403: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 404: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 405: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 406: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 407: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 408: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 409: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 410: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 411: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 412: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 413: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 414: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 415: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 416: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 417: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 418: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 419: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 420: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 421: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 422: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 423: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 424: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+Row 425: {"Table 1"=>"Education", nil=>nil}
+Extracted - Product: '', Level: '', DTP: '', Part Number: ''
+  [1m[36mProduct Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:66:in `upload_csv'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 59ms (ActiveRecord: 0.2ms | Allocations: 56956)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:44:58 +0530
+Processing by PriceCalculatorController#index as TURBO_STREAM
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1017)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2910)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 3557)
+
+
+Started POST "/price_calculator/upload_csv" for 127.0.0.1 at 2025-10-27 11:46:38 +0530
+Processing by PriceCalculatorController#upload_csv as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "csv_file"=>#<ActionDispatch::Http::UploadedFile:0x000000012bbf2120 @tempfile=#<Tempfile:/var/folders/pg/hjqjg2bd6n19jqmz8j5jjp2h0000gp/T/RackMultipart20251027-28710-61wjfr.csv>, @content_type="text/csv", @original_filename="sample_working.csv", @headers="Content-Disposition: form-data; name=\"csv_file\"; filename=\"sample_working.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Upload CSV"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:28:in `upload_csv'
+CSV Headers: ["Product Family", "Level Detail", "Unit DTP per Year / Per Txn"]
+Row 0: {"Product Family"=>"Education", "Level Detail"=>"Level 1 1 - 9", "Unit DTP per Year / Per Txn"=>"150.00"}
+Extracted - Product: 'Education', Level: 'Level 1 1 - 9', DTP: '150.00', Part Number: ''
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:58:in `block in upload_csv'
+  [1m[36mProduct Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."part_number" = ? LIMIT ?[0m  [["part_number", "PN-1-Level1"], ["LIMIT", 1]]
+  ↳ app/controllers/price_calculator_controller.rb:58:in `block in upload_csv'
+  [1m[36mProduct Create (0.8ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at", "part_number") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Education"], ["level", "Level 1"], ["dtp_price", 150.0], ["created_at", "2025-10-27 06:16:38.749290"], ["updated_at", "2025-10-27 06:16:38.749290"], ["part_number", "PN-1-Level1"]]
+  ↳ app/controllers/price_calculator_controller.rb:58:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:58:in `block in upload_csv'
+Row 1: {"Product Family"=>"Healthcare", "Level Detail"=>"Level 2 10 - 49", "Unit DTP per Year / Per Txn"=>"200.00"}
+Extracted - Product: 'Healthcare', Level: 'Level 2 10 - 49', DTP: '200.00', Part Number: ''
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:58:in `block in upload_csv'
+  [1m[36mProduct Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."part_number" = ? LIMIT ?[0m  [["part_number", "PN-2-Level2"], ["LIMIT", 1]]
+  ↳ app/controllers/price_calculator_controller.rb:58:in `block in upload_csv'
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at", "part_number") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Healthcare"], ["level", "Level 2"], ["dtp_price", 200.0], ["created_at", "2025-10-27 06:16:38.753237"], ["updated_at", "2025-10-27 06:16:38.753237"], ["part_number", "PN-2-Level2"]]
+  ↳ app/controllers/price_calculator_controller.rb:58:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:58:in `block in upload_csv'
+Row 2: {"Product Family"=>"Technology", "Level Detail"=>"Tier 1 1 to 999 Transactions", "Unit DTP per Year / Per Txn"=>"300.00"}
+Extracted - Product: 'Technology', Level: 'Tier 1 1 to 999 Transactions', DTP: '300.00', Part Number: ''
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:58:in `block in upload_csv'
+  [1m[36mProduct Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."part_number" = ? LIMIT ?[0m  [["part_number", "PN-3-Tier1"], ["LIMIT", 1]]
+  ↳ app/controllers/price_calculator_controller.rb:58:in `block in upload_csv'
+  [1m[36mProduct Create (0.1ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at", "part_number") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Technology"], ["level", "Tier 1"], ["dtp_price", 300.0], ["created_at", "2025-10-27 06:16:38.755223"], ["updated_at", "2025-10-27 06:16:38.755223"], ["part_number", "PN-3-Tier1"]]
+  ↳ app/controllers/price_calculator_controller.rb:58:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:58:in `block in upload_csv'
+Row 3: {"Product Family"=>"Finance", "Level Detail"=>"Level 3 50 - 99", "Unit DTP per Year / Per Txn"=>"175.00"}
+Extracted - Product: 'Finance', Level: 'Level 3 50 - 99', DTP: '175.00', Part Number: ''
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:58:in `block in upload_csv'
+  [1m[36mProduct Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."part_number" = ? LIMIT ?[0m  [["part_number", "PN-4-Level3"], ["LIMIT", 1]]
+  ↳ app/controllers/price_calculator_controller.rb:58:in `block in upload_csv'
+  [1m[36mProduct Create (0.0ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at", "part_number") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Finance"], ["level", "Level 3"], ["dtp_price", 175.0], ["created_at", "2025-10-27 06:16:38.756749"], ["updated_at", "2025-10-27 06:16:38.756749"], ["part_number", "PN-4-Level3"]]
+  ↳ app/controllers/price_calculator_controller.rb:58:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:58:in `block in upload_csv'
+Row 4: {"Product Family"=>"Retail", "Level Detail"=>"Tier 2 1000 to 2499 Transactions", "Unit DTP per Year / Per Txn"=>"125.00"}
+Extracted - Product: 'Retail', Level: 'Tier 2 1000 to 2499 Transactions', DTP: '125.00', Part Number: ''
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:58:in `block in upload_csv'
+  [1m[36mProduct Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "products" WHERE "products"."part_number" = ? LIMIT ?[0m  [["part_number", "PN-5-Tier2"], ["LIMIT", 1]]
+  ↳ app/controllers/price_calculator_controller.rb:58:in `block in upload_csv'
+  [1m[36mProduct Create (0.0ms)[0m  [1m[32mINSERT INTO "products" ("name", "level", "dtp_price", "created_at", "updated_at", "part_number") VALUES (?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Retail"], ["level", "Tier 2"], ["dtp_price", 125.0], ["created_at", "2025-10-27 06:16:38.758160"], ["updated_at", "2025-10-27 06:16:38.758160"], ["part_number", "PN-5-Tier2"]]
+  ↳ app/controllers/price_calculator_controller.rb:58:in `block in upload_csv'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/price_calculator_controller.rb:58:in `block in upload_csv'
+  [1m[36mProduct Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:66:in `upload_csv'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 37ms (ActiveRecord: 4.3ms | Allocations: 23183)
+
+
+Started GET "/" for 127.0.0.1 at 2025-10-27 11:46:38 +0530
+Processing by PriceCalculatorController#index as TURBO_STREAM
+  [1m[36mProduct Pluck (0.1ms)[0m  [1m[34mSELECT DISTINCT "products"."level" FROM "products"[0m
+  ↳ app/controllers/price_calculator_controller.rb:21:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering price_calculator/index.html.erb within layouts/application
+  Rendered price_calculator/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1012)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2905)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 3527)
+
+
+Started GET "/price_calculator/search_products?level=Level%201&query=Education" for 127.0.0.1 at 2025-10-27 11:47:13 +0530
+Processing by PriceCalculatorController#search_products as */*
+  Parameters: {"level"=>"Level 1", "query"=>"Education"}
+  [1m[36mProduct Pluck (0.6ms)[0m  [1m[34mSELECT "products"."name", "products"."dtp_price", "products"."part_number" FROM "products" WHERE "products"."level" = ? AND (name ILIKE '%Education%')[0m  [["level", "Level 1"]]
+  ↳ app/controllers/price_calculator_controller.rb:99:in `search_products'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.6ms | Allocations: 1557)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: near "ILIKE": syntax error:
+SELECT "products"."name", "products"."dtp_price", "products"."part_number" FROM "products" WHERE "products"."level" = ? AND (name ILIKE '%Education%')
+                                                                                                                                  ^):
+  

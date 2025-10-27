@@ -36,16 +36,16 @@ class PriceCalculatorController < ApplicationController
         csv_data.each_with_index do |row, index|
           # Debug: Log each row to see the data
           Rails.logger.info "Row #{index}: #{row.to_h.inspect}"
-          
+
           # Read ONLY the specific columns you mentioned
           product_name = row['Product Family']
-          level_detail = row['Level Detail'] 
+          level_detail = row['Level Detail']
           dtp_price = row['Unit DTP per Year / Per Txn']
           part_number = row['Part Number']
-          
+
           # Debug: Log the extracted values
           Rails.logger.info "Extracted - Product: '#{product_name}', Level: '#{level_detail}', DTP: '#{dtp_price}', Part Number: '#{part_number}'"
-          
+
           # Skip rows with missing essential data
           next if product_name.blank? || level_detail.blank? || dtp_price.blank?
 
@@ -93,27 +93,27 @@ class PriceCalculatorController < ApplicationController
     level = params[:level]
     query = params[:query]
 
-    if level.present? && query.present?
-      @products = Product.where(level: level)
-                        .where("name ILIKE ?", "%#{query}%")
-                        .pluck(:name, :dtp_price, :part_number)
-      render json: @products.map { |name, price, part_number| { name: name, dtp_price: price, part_number: part_number } }
-    else
-      render json: []
-    end
+            if level.present? && query.present?
+              @products = Product.where(level: level)
+                                .where("name LIKE ?", "%#{query}%")
+                                .pluck(:name, :dtp_price, :part_number)
+              render json: @products.map { |name, price, part_number| { name: name, dtp_price: price, part_number: part_number } }
+            else
+              render json: []
+            end
   end
 
   def search_part_numbers
     level = params[:level]
     query = params[:query]
 
-    if level.present? && query.present?
-      @part_numbers = Product.where(level: level)
-                            .where("part_number ILIKE ?", "%#{query}%")
-                            .pluck(:part_number, :name, :dtp_price)
-      render json: @part_numbers.map { |part_number, name, price| { part_number: part_number, name: name, dtp_price: price } }
-    else
-      render json: []
-    end
+            if level.present? && query.present?
+              @part_numbers = Product.where(level: level)
+                                    .where("part_number LIKE ?", "%#{query}%")
+                                    .pluck(:part_number, :name, :dtp_price)
+              render json: @part_numbers.map { |part_number, name, price| { part_number: part_number, name: name, dtp_price: price } }
+            else
+              render json: []
+            end
   end
 end
